@@ -1,5 +1,5 @@
 /*
- * Public API Surface of angular-stripe-service
+ * Public API Surface of angular-wepay-service
  */
 
-export * from './lib/angular-stripe.service';
+export * from './lib/angular-wepay.service';

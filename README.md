@@ -1,10 +1,10 @@
-# Angular Stripe Service
+# Angular WePay Service
 
-Stripe service used to integrate Stripe Elements with Angular.
+WePay service used to integrate WePay Elements with Angular. Forked from (https://github.com/fireflysemantics/angular-stripe-service)
 
 ## Documentation
 
-[Integrating Stripe Elements with Angular](https://developer.fireflysemantics.com/tasks/tasks--angular--integrating-stripe-elements-with-angular)
+[Integrating WePay Elements with Angular](https://developer.fireflysemantics.com/tasks/tasks--angular--integrating-stripe-elements-with-angular)
 
 ## Stackblitz
 
@@ -15,13 +15,13 @@ Stripe service used to integrate Stripe Elements with Angular.
 ```
   constructor(
     private cd: ChangeDetectorRef,
-    private stripeService:AngularStripeService) {}
+    private wepayService:AngularwepayService) {}
 
   ngAfterViewInit() {
-    this.stripeService.setPublishableKey('pk_test_2syov9fTMRwOxYG97AAXbOgt008X6NL46o').then(
-      stripe=> {
-        this.stripe = stripe;
-    const elements = stripe.elements();    
+    this.wepayService.setPublishableKey('pk_test_2syov9fTMRwOxYG97AAXbOgt008X6NL46o').then(
+      wepay=> {
+        this.wepay = wepay;
+    const elements = wepay.elements();    
     this.card = elements.create('card');
     this.card.mount(this.cardInfo.nativeElement);
     this.card.addEventListener('change', this.cardHandler);
@@ -31,10 +31,10 @@ Stripe service used to integrate Stripe Elements with Angular.
 
 ## Why?
 
-The `@fireflysemantics/angular-stripe-service` service injects the Stripe scripts for us and waits for it to load before attempting to initialize elements.
+The `@givtnl/angular-wepay-service` service injects the wepay scripts for us and waits for it to load before attempting to initialize elements.
 
-The reason this is important is that if our component containing the Stripe form is loaded before Stripe has a chance to initialize elements then the form will not paint correctly.
+The reason this is important is that if our component containing the wepay form is loaded before wepay has a chance to initialize elements then the form will not paint correctly.
 
-In other words the Stripe API download and subsequent elements construction is racing the construction of the credit card form component.
+In other words the wepay API download and subsequent elements construction is racing the construction of the credit card form component.
 
 If the form component wins that race, the component does not get constructed right, because elements is not yet available.

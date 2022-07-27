@@ -1,17 +1,17 @@
 {
-  "name": "@fireflysemantics/angular-stripe-service",
+  "name": "@givtnl/angular-wepay-service",
   "version": "1.0.6",
-  "author": "Ole Ersoy",
+  "author": "GivtNL and Ole Ersoy",
   "license": "MIT",
   "dependencies": {
     "tslib": "^2.3.0"
   },
   "bugs": {
-    "url": "https://github.com/fireflysemantics/angular-stripe-service/issues"
+    "url": "https://github.com/givtnl/angular-wepay-service/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fireflysemantics/angular-stripe-service.git"
+    "url": "git+https://github.com/givtnl/angular-wepay-service.git"
   },
   "keywords": [
     "Light Weight",

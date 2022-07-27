@@ -3,9 +3,9 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
-      "angular-stripe-service": [
-        "dist/angular-stripe-service/angular-stripe-service",
-        "dist/angular-stripe-service"
+      "angular-wepay-service": [
+        "dist/angular-wepay-service/angular-wepay-service",
+        "dist/angular-wepay-service"
       ]
     },
     "baseUrl": "./",

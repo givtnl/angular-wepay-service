@@ -3,23 +3,23 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-stripe-service": {
+    "angular-wepay-service": {
       "projectType": "library",
-      "root": "projects/angular-stripe-service",
-      "sourceRoot": "projects/angular-stripe-service/src",
+      "root": "projects/angular-wepay-service",
+      "sourceRoot": "projects/angular-wepay-service/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/angular-stripe-service/ng-package.json"
+            "project": "projects/angular-wepay-service/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/angular-stripe-service/tsconfig.lib.prod.json"
+              "tsConfig": "projects/angular-wepay-service/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/angular-stripe-service/tsconfig.lib.json"
+              "tsConfig": "projects/angular-wepay-service/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -27,13 +27,13 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/angular-stripe-service/src/test.ts",
-            "tsConfig": "projects/angular-stripe-service/tsconfig.spec.json",
-            "karmaConfig": "projects/angular-stripe-service/karma.conf.js"
+            "main": "projects/angular-wepay-service/src/test.ts",
+            "tsConfig": "projects/angular-wepay-service/tsconfig.spec.json",
+            "karmaConfig": "projects/angular-wepay-service/karma.conf.js"
           }
         }
       }
     }
   },
-  "defaultProject": "angular-stripe-service"
+  "defaultProject": "angular-wepay-service"
 }

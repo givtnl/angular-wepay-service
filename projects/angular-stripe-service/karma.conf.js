@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, '../../coverage/angular-stripe-service'),
+      dir: require('path').join(__dirname, '../../coverage/angular-wepay-service'),
       subdir: '.',
       reporters: [
         { type: 'html' },

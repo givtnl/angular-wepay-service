@@ -1,5 +1,5 @@
 {
-  "name": "@fireflysemantics/angular-stripe-service",
+  "name": "@givtnl/angular-wepay-service",
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
@@ -8,11 +8,11 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "ig": "npm install -g @jsdevtools/version-bump-prompt && npm install -g npm-check-updates && npm install -g npm-install-peers",
-    "c": "ng build angular-stripe-service",
-    "u": "cd projects/angular-stripe-service && ncu -u && npm i && npm-install-peers",
-    "bp": "cd projects/angular-stripe-service && bump patch",
-    "p": "npm run cp && npm run bp && npm run c && cd dist/angular-stripe-service/ && npm publish",
-    "cp": "cp README.md projects/angular-stripe-service",
+    "c": "ng build angular-wepay-service",
+    "u": "cd projects/angular-wepay-service && ncu -u && npm i && npm-install-peers",
+    "bp": "cd projects/angular-wepay-service && bump patch",
+    "p": "npm run cp && npm run bp && npm run c && cd dist/angular-wepay-service/ && npm publish",
+    "cp": "cp README.md projects/angular-wepay-service",
     "d": "typedoc --out doc --exclude **/*.spec.ts ./projects/slice/src/lib"
   },
   "private": true,

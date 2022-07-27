@@ -1,67 +1,67 @@
 import { Injectable } from '@angular/core';
-import { Stripe, StripeFactory } from './types';
+import { WePay, WePayFactory } from './types';
 
-const STRIPE_API_URL = "https://js.stripe.com/v3/";
+const WEPAY_API_URL = "https://cdn.wepay.com/wepay.min.js";
 
 @Injectable({
   providedIn: 'root'
 })
 /**
- * This service has a `stripe` property to that gets
- * initialized to `window["Stripe"]`.
+ * This service has a `wepay` property to that gets
+ * initialized to `window["WePay"]`.
  * 
  * The constructor calls `inject()` which will
  * inject a script tag with containing the URL that loads
- * stripe and return a `Promise<StripeFactory>`.
+ * wepay and return a `Promise<WePayFactory>`.
  * 
- * The script tag will only load stripe if 
- * c is not available.
+ * The script tag will only load wepay if 
+ * it is not available.
  * 
- * If `window["Stripe"]` is available then `inject()` resolves 
+ * If `window["WePay"]` is available then `inject()` resolves 
  * the promise with that instance immediately, and does not create and 
  * wait for the script tag to load.
  * 
  *  
  */
-export class AngularStripeService{
+export class AngularWePayService{
 
   // @ts-ignore
-  private _stripe:StripeFactory = window['Stripe']
-  private stripePromise:Promise<any>
+  private _wepay:WePayFactory = window['WePay']
+  private wePayPromise:Promise<any>
 
   constructor() { 
-    this.stripePromise = this.inject()
+    this.wePayPromise = this.inject()
   }
 
-  get stripe() {
-    return this._stripe;
+  get wepay() {
+    return this._wepay;
   } 
-  set stripe(s:StripeFactory) {
-    this._stripe = s;
+  set wepay(s:WePayFactory) {
+    this._wepay = s;
   }
 
-  setPublishableKey(key:string, options?:any):Promise<Stripe>{
-    return this.stripePromise.then( () => {
-      return this.stripe(key, options)
+  setPublishableKey(key:string, options?:any):Promise<WePay>{
+    return this.wePayPromise.then( () => {
+      return this.wepay(key, options)
     })
   }
 
-  inject():Promise<StripeFactory>{
+  inject():Promise<WePayFactory>{
 
-    if( this.stripe ){
-      return Promise.resolve( this.stripe )
+    if( this.wepay ){
+      return Promise.resolve( this.wepay )
     }
 
     return new Promise((res,rej)=>{
       const head = this.getHeadElement()
       const script = document.createElement("script")
       script.setAttribute("type", "text/javascript")
-      script.setAttribute("src", STRIPE_API_URL)      
+      script.setAttribute("src", WEPAY_API_URL)      
       head.appendChild(script)      
       script.addEventListener("load",()=>{
         // @ts-ignore
-        this.stripe = window["Stripe"];
-        res( this.stripe )
+        this.wepay = window["WePay"];
+        res( this.wepay )
       })
     })
   }
