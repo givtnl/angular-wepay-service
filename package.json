@@ -13,7 +13,8 @@
     "bp": "cd projects/angular-wepay-service && bump patch",
     "p": "npm run cp && npm run bp && npm run c && cd dist/angular-wepay-service/ && npm publish",
     "cp": "cp README.md projects/angular-wepay-service",
-    "d": "typedoc --out doc --exclude **/*.spec.ts ./projects/slice/src/lib"
+    "d": "typedoc --out doc --exclude **/*.spec.ts ./projects/slice/src/lib",
+    "postinstall": "ng build && cp -R dist/angular-wepay-service/* ."
   },
   "private": true,
   "dependencies": {
