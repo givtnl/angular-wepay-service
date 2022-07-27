@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { WePay, WePayFactory } from './types';
+import { WePay } from './types';
 
 const WEPAY_API_URL = "https://cdn.wepay.com/wepay.min.js";
 
@@ -26,7 +26,7 @@ const WEPAY_API_URL = "https://cdn.wepay.com/wepay.min.js";
 export class AngularWePayService{
 
   // @ts-ignore
-  private _wepay:WePayFactory = window['WePay']
+  private _wepay:WePay = window['WePay']
   private wePayPromise:Promise<any>
 
   constructor() { 
@@ -36,17 +36,17 @@ export class AngularWePayService{
   get wepay() {
     return this._wepay;
   } 
-  set wepay(s:WePayFactory) {
+  set wepay(s:WePay) {
     this._wepay = s;
   }
 
   create():Promise<WePay>{
     return this.wePayPromise.then( () => {
-      return this.wepay()
+      return this.wepay;
     })
   }
 
-  inject():Promise<WePayFactory>{
+  inject():Promise<WePay>{
 
     if( this.wepay ){
       return Promise.resolve( this.wepay )
