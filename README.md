@@ -29,6 +29,13 @@ WePay service used to integrate WePay Elements with Angular. Forked from (https:
 }
 ```
 
+## For development
+1. Clone this repo
+2. `npm install`
+3. `ng build`
+
+4. In your target project, do `npm install [git folder path]/dist/angular-wepay-service (this will create a simlink)
+
 ## Why?
 
 The `@givtnl/angular-wepay-service` service injects the wepay scripts for us and waits for it to load before attempting to initialize elements.

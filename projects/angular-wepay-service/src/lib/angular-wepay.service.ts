@@ -40,9 +40,9 @@ export class AngularWePayService{
     this._wepay = s;
   }
 
-  setPublishableKey(key:string, options?:any):Promise<WePay>{
+  create():Promise<WePay>{
     return this.wePayPromise.then( () => {
-      return this.wepay(key, options)
+      return this.wepay()
     })
   }
 

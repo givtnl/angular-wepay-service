@@ -1,5 +1,5 @@
 export interface WePayFactory {
-    ( publicKey:string,options?:any):WePay
+    ():WePay
 }
 
 export interface WePay {
