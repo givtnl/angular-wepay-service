@@ -1,6 +1,6 @@
 {
   "name": "@givtnl/angular-wepay-service",
-  "version": "1.0.6",
+  "version": "1.0.9",
   "author": "GivtNL and Ole Ersoy",
   "license": "MIT",
   "dependencies": {

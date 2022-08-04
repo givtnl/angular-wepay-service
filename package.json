@@ -1,6 +1,6 @@
 {
   "name": "@givtnl/angular-wepay-service",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -11,10 +11,10 @@
     "c": "ng build angular-wepay-service",
     "u": "cd projects/angular-wepay-service && ncu -u && npm i && npm-install-peers",
     "bp": "cd projects/angular-wepay-service && bump patch",
-    "p": "npm run cp && npm run bp && npm run c && cd dist/angular-wepay-service/ && npm publish",
+    "p": "npm run cp && npm run bp && npm run c && cd dist/angular-wepay-service/ && npm publish --access public",
     "cp": "cp README.md projects/angular-wepay-service",
     "d": "typedoc --out doc --exclude **/*.spec.ts ./projects/slice/src/lib"
-    },
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~13.0.0",
